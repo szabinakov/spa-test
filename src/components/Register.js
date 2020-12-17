@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 
 export default function Register({ userState, setUserState }) {
   const [value, setValue] = useState();
-
+  const history = useHistory();
   const handleChange = (event) => {
     setValue({
       ...value,
@@ -24,9 +24,9 @@ export default function Register({ userState, setUserState }) {
         })
         .then((response) => {
           setUserState({
-            email: value.email,
             isUserLoggedIn: true,
           });
+          history.push("/");
         })
         .catch((error) => {
           console.log(error);
