@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-export default function Register({ userState, setUserState }) {
+export default function Login({ userState, setUserState }) {
   const [value, setValue] = useState();
 
   const handleChange = (event) => {
@@ -14,25 +14,22 @@ export default function Register({ userState, setUserState }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    if (value.password === value.confirmPassword) {
-      console.log("Password Matches");
-      axios
-        .post("https://reqres.in/api/register", {
+    axios
+      .post("https://reqres.in/api/login", {
+        username: value.username,
+        password: value.password,
+      })
+      .then((response) => {
+        setUserState({
           email: value.email,
-          password: value.password,
-        })
-        .then((response) => {
-          setUserState({
-            email: value.email,
-            isUserLoggedIn: true,
-          });
-        })
-        .catch((error) => {
-          console.log(error);
+          isUserLoggedIn: true,
         });
-    }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="email">Email</label>
@@ -55,18 +52,8 @@ export default function Register({ userState, setUserState }) {
         onChange={handleChange}
         required
       />
-      <label htmlFor="confirmPassword">Confirm Password</label>
-      <input
-        type="password"
-        id="confirmPassword"
-        className="confirmPassword"
-        name="confirmPassword"
-        placeholder="Please confirm your password!"
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Register</button>
-      <Link to="/">Already member? Login here!</Link>
+      <button type="submit">Login</button>
+      <Link to="/register">Not a member? Register here!</Link>
     </form>
   );
 }
