@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 
 export default function Login({ userState, setUserState }) {
   const [value, setValue] = useState();
-
+  const history = useHistory();
   const handleChange = (event) => {
     setValue({
       ...value,
@@ -16,14 +16,14 @@ export default function Login({ userState, setUserState }) {
     event.preventDefault();
     axios
       .post("https://reqres.in/api/login", {
-        username: value.username,
+        email: value.email,
         password: value.password,
       })
       .then((response) => {
         setUserState({
-          email: value.email,
           isUserLoggedIn: true,
         });
+        history.push("/");
       })
       .catch((error) => {
         console.log(error);
