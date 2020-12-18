@@ -1,12 +1,13 @@
 .registerFormContainer {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid black;
-  height: 350px;
 }
-
+.registerFormContainer > h3 {
+  font-weight: lighter;
+}
 .registerForm {
   background-color: rgba(239, 71, 110);
   border-radius: 20px;
@@ -41,8 +42,11 @@
 }
 
 .registerForm > div > button {
-  width: 70px;
+  width: 90px;
+  height: 25px;
+  border-radius: 20px;
   align-self: center;
+  text-transform: uppercase;
 }
 
 .registerForm > div > a > p {
