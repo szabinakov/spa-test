@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
-import "../styles/Register.css";
+import "../styles/Form.css";
 import Alert from "./Alert.js";
 
 export default function Register({ userState, setUserState }) {
@@ -48,42 +48,39 @@ export default function Register({ userState, setUserState }) {
     }
   };
   return (
-    <div className="registerFormContainer">
+    <div className="formContainer">
       <Alert message={alert.message} success={alert.isSuccess} />
-      <h3>Please fill out the details below!</h3>
-      <form className="registerForm" onSubmit={handleSubmit}>
+      <h1>Please fill out the details below!</h1>
+      <form className="form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">Email</label>
           <input
             type="text"
             id="email"
             className="email"
             name="email"
-            placeholder="Please enter your email address!"
+            placeholder="Enter your email address!"
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
             className="password"
             name="password"
-            placeholder="Please enter your chosen password!"
+            placeholder="Enter your chosen password!"
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="confirmPassword">Confirm Password</label>
           <input
             type="password"
             id="confirmPassword"
             className="confirmPassword"
             name="confirmPassword"
-            placeholder="Please confirm your password!"
+            placeholder="Confirm your password!"
             onChange={handleChange}
             required
           />

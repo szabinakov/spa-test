@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
-import "../styles/Login.css";
+import "../styles/Form.css";
 import Alert from "./Alert.js";
 
 export default function Login({ userState, setUserState }) {
@@ -45,29 +45,28 @@ export default function Login({ userState, setUserState }) {
   };
 
   return (
-    <div className="loginFormContainer">
+    <div className="formContainer">
       <Alert message={alert.message} success={alert.isSuccess} />
-      <form className="loginForm" onSubmit={handleSubmit}>
+      <h1>Welcome to the App, Please login!</h1>
+      <form className="form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">Email:</label>
           <input
             type="text"
             id="email"
             className="email"
             name="email"
-            placeholder="Your email address!"
+            placeholder="Enter email!"
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
             className="password"
             name="password"
-            placeholder="Your password!"
+            placeholder="Enter password!"
             onChange={handleChange}
             required
           />
