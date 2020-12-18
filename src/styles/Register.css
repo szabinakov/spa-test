@@ -1,0 +1,44 @@
+.registerFormContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black;
+  height: 350px;
+}
+
+.registerForm {
+  background-color: rgba(239, 71, 110);
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px;
+  padding: 10px;
+  min-width: 260px;
+}
+.registerForm > div {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.registerForm > div > label {
+  align-self: center;
+  padding-bottom: 9px;
+}
+
+.registerForm > div > input {
+  height: 20px;
+  width: 80%;
+  align-self: center;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px;
+}
+
+.registerForm > div > button {
+  width: 70px;
+  align-self: center;
+}
+
+.registerForm > div > a > p {
+  text-align: center;
+  font-size: 10px;
+}
