@@ -1,15 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import UserCard from "./UserCard.js";
+import Alert from "./Alert.js";
 
 export default function UserList() {
+  const initialState = {
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
+  };
+  const [alert, setAlert] = useState(initialState.alert);
   const [usersForActionList, setUsersForActionList] = useState([]);
 
   useEffect(() => {
     axios
       .get("https://reqres.in/api/users")
       .then((response) => setUsersForActionList(response.data.data))
-      .catch((error) => console.log(error));
+      .catch(() => {
+        setAlert({
+          message: "Something went wrong! Can not load users!",
+          isSuccess: false,
+        });
+      });
   }, []);
 
   const deleteUser = (id) => {
@@ -20,11 +33,23 @@ export default function UserList() {
           usersForActionList.filter((user) => user.id !== id)
         );
       })
-      .then(() => console.log("user deleted"))
-      .catch((error) => console.log(error));
+      .then(() => {
+        setAlert({
+          message: "User has heen successfully removed!",
+          isSuccess: true,
+        });
+      })
+      .then(setTimeout(() => setAlert({ message: "", isSuccess: false }), 2000))
+      .catch(() => {
+        setAlert({
+          message: "Can not remove user! Please try again!",
+          isSuccess: false,
+        });
+      });
   };
   return (
     <div>
+      <Alert message={alert.message} success={alert.isSuccess} />
       {usersForActionList.map((user) => (
         <UserCard
           key={user.id}
