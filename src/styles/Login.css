@@ -34,8 +34,14 @@
   height: 20px;
   width: 80%;
   align-self: center;
-  border-radius: 4px;
-  box-shadow: 3px 3px 3px;
+  text-align: center;
+  border: none;
+  background-color: rgba(239, 71, 110);
+  border-bottom: 1px solid black;
+}
+.loginForm > div > input:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(253, 249, 249);
 }
 
 .loginForm > div > button {
