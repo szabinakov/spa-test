@@ -3,10 +3,19 @@ import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
 import "../styles/Register.css";
+import Alert from "./Alert.js";
 
 export default function Register({ userState, setUserState }) {
+  const initialState = {
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
+  };
+  const [alert, setAlert] = useState(initialState.alert);
   const [value, setValue] = useState();
   const history = useHistory();
+
   const handleChange = (event) => {
     setValue({
       ...value,
@@ -30,13 +39,18 @@ export default function Register({ userState, setUserState }) {
           });
           history.push("/");
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
+          setAlert({
+            message: "Registration failed, please try again!",
+            isSuccess: false,
+          });
         });
     }
   };
   return (
     <div className="registerFormContainer">
+      <Alert message={alert.message} success={alert.isSuccess} />
+      <h3>Please fill out the details below!</h3>
       <form className="registerForm" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email</label>
