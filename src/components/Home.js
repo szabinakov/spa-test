@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Login from "./Login.js";
 import UserList from "./UserList.js";
+import "../styles/Home.css";
 
 export default function Home({ userState, setUserState }) {
   const isUserLoggedIn = userState.isUserLoggedIn;
@@ -11,14 +12,14 @@ export default function Home({ userState, setUserState }) {
   let content;
 
   if (isUserLoggedIn) {
-    message = <h1>Welcome Back!</h1>;
+    message = <h1>Welcome!</h1>;
     content = (
       <>
         <UserList />
       </>
     );
   } else {
-    message = <h1>Welcome to the App, please login!</h1>;
+    message = <h1>Please login!</h1>;
     content = (
       <>
         <Login userState={userState} setUserState={setUserState} />
