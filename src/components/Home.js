@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import Login from "./Login.js";
 import UserList from "./UserList.js";
 
@@ -30,3 +32,8 @@ export default function Home({ userState, setUserState }) {
     </div>
   );
 }
+
+Home.propTypes = {
+  userState: PropTypes.object,
+  setUserState: PropTypes.func,
+};

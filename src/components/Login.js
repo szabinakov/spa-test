@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
+import PropTypes from "prop-types";
 
 export default function Login({ userState, setUserState }) {
   const [value, setValue] = useState();
@@ -57,3 +58,8 @@ export default function Login({ userState, setUserState }) {
     </form>
   );
 }
+
+Login.propTypes = {
+  userState: PropTypes.object,
+  setUserState: PropTypes.func,
+};

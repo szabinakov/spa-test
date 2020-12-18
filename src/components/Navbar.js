@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function Navbar({ userState }) {
   const isUserLoggedIn = userState.isUserLoggedIn;
@@ -20,3 +21,7 @@ export default function Navbar({ userState }) {
     </div>
   );
 }
+
+Navbar.propTypes = {
+  userState: PropTypes.object,
+};
