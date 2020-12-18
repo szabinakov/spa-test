@@ -1,12 +1,26 @@
 import React from "react";
 import Login from "./Login.js";
-import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Home({ userState, setUserState }) {
+  const isUserLoggedIn = userState.isUserLoggedIn;
+
+  let message;
+  let loginform;
+
+  if (isUserLoggedIn) {
+    message = <h1>Welcome Back!</h1>;
+  } else {
+    message = <h1>Welcome to the App, please login!</h1>;
+    loginform = (
+      <>
+        <Login userState={userState} setUserState={setUserState} />
+      </>
+    );
+  }
   return (
     <div>
-      hello from home
-      <Link to="/login">Login</Link>
+      {message}
+      {loginform}
     </div>
   );
 }
