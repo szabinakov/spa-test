@@ -19,7 +19,7 @@ export default function AddUsers() {
     event.preventDefault();
     axios
       .post("https://reqres.in/api/users", fields)
-      .then((response) => console.log(response))
+      .then((response) => console.log("User Added " + response))
       .catch((error) => console.log(error));
   };
   return (
