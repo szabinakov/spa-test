@@ -7,31 +7,7 @@ import "../styles/Home.css";
 
 export default function Home({ userState, setUserState }) {
   const isUserLoggedIn = userState.isUserLoggedIn;
-
-  let message;
-  let content;
-
-  if (isUserLoggedIn) {
-    message = <h1>Welcome!</h1>;
-    content = (
-      <>
-        <UserList />
-      </>
-    );
-  } else {
-    message = <h1>Please login!</h1>;
-    content = (
-      <>
-        <Login userState={userState} setUserState={setUserState} />
-      </>
-    );
-  }
-  return (
-    <div>
-      {message}
-      {content}
-    </div>
-  );
+  return <div>{isUserLoggedIn ? <UserList /> : <Login />}</div>;
 }
 
 Home.propTypes = {
