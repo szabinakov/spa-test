@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import UserCard from "./UserCard.js";
 import Alert from "./Alert.js";
+import "../styles/UserList.css";
 
 export default function UserList() {
   const initialState = {
@@ -35,7 +36,7 @@ export default function UserList() {
       })
       .then(() => {
         setAlert({
-          message: "User has heen successfully removed!",
+          message: "User has been successfully removed!",
           isSuccess: true,
         });
       })
@@ -48,7 +49,7 @@ export default function UserList() {
       });
   };
   return (
-    <div>
+    <div className="userListContainer">
       <Alert message={alert.message} success={alert.isSuccess} />
       {usersForActionList.map((user) => (
         <UserCard

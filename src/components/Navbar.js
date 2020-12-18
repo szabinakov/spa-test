@@ -7,7 +7,6 @@ export default function Navbar({ userState }) {
 
   return (
     <div>
-      <div>LOGO</div>
       {isUserLoggedIn && (
         <ul>
           <Link to="/">
