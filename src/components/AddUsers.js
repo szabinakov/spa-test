@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Alert from "./Alert.js";
 
 export default function AddUsers() {
   const initialState = {
@@ -9,21 +10,35 @@ export default function AddUsers() {
       job: "",
       email: "",
     },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
   const [fields, setFields] = useState(initialState.fields);
-
+  const [alert, setAlert] = useState(initialState.alert);
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
   };
   const handleAddUser = (event) => {
     event.preventDefault();
+    setAlert({ message: "", isSuccess: false });
     axios
       .post("https://reqres.in/api/users", fields)
-      .then((response) => console.log("User Added " + response))
-      .catch((error) => console.log(error));
+      .then(() => {
+        setAlert({ message: "User Added Successfully", isSuccess: true });
+      })
+      .then(setTimeout(() => setAlert({ message: "", isSuccess: false }), 2000))
+      .catch(() => {
+        setAlert({
+          message: "Something went wrong! Please try again!",
+          isSuccess: false,
+        });
+      });
   };
   return (
     <div>
+      <Alert message={alert.message} success={alert.isSuccess} />
       <form onSubmit={handleAddUser}>
         <label htmlFor="firstname">First Name</label>
         <input
