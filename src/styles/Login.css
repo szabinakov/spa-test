@@ -1,0 +1,43 @@
+.loginFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black;
+  height: 350px;
+}
+
+.loginForm {
+  background-color: rgba(239, 71, 110);
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px;
+  padding: 10px;
+  min-width: 260px;
+}
+.loginForm > div {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.loginForm > div > label {
+  align-self: center;
+  padding-bottom: 9px;
+}
+
+.loginForm > div > input {
+  height: 20px;
+  width: 80%;
+  align-self: center;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px;
+}
+
+.loginForm > div > button {
+  width: 50px;
+  align-self: center;
+}
+
+.loginForm > div > a > p {
+  text-align: center;
+  font-size: 10px;
+}

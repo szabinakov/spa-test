@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
+import "../styles/Login.css";
 
 export default function Login({ userState, setUserState }) {
   const [value, setValue] = useState();
@@ -32,30 +33,42 @@ export default function Login({ userState, setUserState }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="email">Email</label>
-      <input
-        type="text"
-        id="email"
-        className="email"
-        name="email"
-        placeholder="Please enter your email address!"
-        onChange={handleChange}
-        required
-      />
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        className="password"
-        name="password"
-        placeholder="Please enter your chosen password!"
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Login</button>
-      <Link to="/register">Not a member? Register here!</Link>
-    </form>
+    <div className="loginFormContainer">
+      <form className="loginForm" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            className="email"
+            name="email"
+            placeholder="Your email address!"
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            className="password"
+            name="password"
+            placeholder="Your password!"
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+        <div>
+          <Link to="/register">
+            <p>Not a member? Register here!</p>
+          </Link>
+        </div>
+      </form>
+    </div>
   );
 }
 
