@@ -26,7 +26,10 @@ export default function AddUsers() {
     axios
       .post("https://reqres.in/api/users", fields)
       .then(() => {
-        setAlert({ message: "User Added Successfully", isSuccess: true });
+        setAlert({
+          message: "User has been added successfully",
+          isSuccess: true,
+        });
       })
       .then(setTimeout(() => setAlert({ message: "", isSuccess: false }), 2000))
       .catch(() => {
