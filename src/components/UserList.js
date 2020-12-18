@@ -7,11 +7,22 @@ export default function UserList() {
 
   useEffect(() => {
     axios
-      .get("https://reqres.in/api/users?page=2")
+      .get("https://reqres.in/api/users")
       .then((response) => setUsersForActionList(response.data.data))
       .catch((error) => console.log(error));
   }, []);
 
+  const deleteUser = (id) => {
+    axios
+      .delete(`https://reqres.in/api/users/${id}`)
+      .then(() => {
+        setUsersForActionList(
+          usersForActionList.filter((user) => user.id !== id)
+        );
+      })
+      .then(() => console.log("user deleted"))
+      .catch((error) => console.log(error));
+  };
   return (
     <div>
       {usersForActionList.map((user) => (
@@ -20,6 +31,7 @@ export default function UserList() {
           name={`${user.first_name} ${user.last_name}`}
           email={user.email}
           avatar={user.avatar}
+          deleteUser={deleteUser}
         />
       ))}
     </div>
