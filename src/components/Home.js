@@ -7,7 +7,16 @@ import "../styles/Home.css";
 
 export default function Home({ userState, setUserState }) {
   const isUserLoggedIn = userState.isUserLoggedIn;
-  return <div>{isUserLoggedIn ? <UserList /> : <Login />}</div>;
+
+  return (
+    <>
+      {isUserLoggedIn ? (
+        <UserList />
+      ) : (
+        <Login userState={userState} setUserState={setUserState} />
+      )}
+    </>
+  );
 }
 
 Home.propTypes = {
