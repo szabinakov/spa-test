@@ -1,17 +1,23 @@
 import React from "react";
 import Login from "./Login.js";
+import UserList from "./UserList.js";
 
 export default function Home({ userState, setUserState }) {
   const isUserLoggedIn = userState.isUserLoggedIn;
 
   let message;
-  let loginform;
+  let content;
 
   if (isUserLoggedIn) {
     message = <h1>Welcome Back!</h1>;
+    content = (
+      <>
+        <UserList />
+      </>
+    );
   } else {
     message = <h1>Welcome to the App, please login!</h1>;
-    loginform = (
+    content = (
       <>
         <Login userState={userState} setUserState={setUserState} />
       </>
@@ -20,7 +26,7 @@ export default function Home({ userState, setUserState }) {
   return (
     <div>
       {message}
-      {loginform}
+      {content}
     </div>
   );
 }
