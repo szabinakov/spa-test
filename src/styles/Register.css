@@ -14,6 +14,13 @@
   padding: 10px;
   min-width: 260px;
 }
+.registerForm > div:first-child {
+  margin-top: 0px;
+}
+.registerForm > div:last-child {
+  margin-bottom: 0px;
+}
+
 .registerForm > div {
   display: flex;
   flex-direction: column;
