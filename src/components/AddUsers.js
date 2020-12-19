@@ -41,53 +41,55 @@ export default function AddUsers() {
       });
   };
   return (
-    <div className="formContainer">
+    <>
       <Alert message={alert.message} success={alert.isSuccess} />
-      <h2>Please fill out the details of the user you would like to add!</h2>
-      <form className="form" onSubmit={handleAddUser}>
-        <div>
-          <input
-            type="text"
-            className="firstname"
-            name="firstname"
-            onChange={handleFieldChange}
-            placeholder="First name!"
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            className="lastname"
-            name="lastname"
-            onChange={handleFieldChange}
-            placeholder="Last name!"
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            className="job"
-            name="job"
-            onChange={handleFieldChange}
-            placeholder="Job title!"
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            className="email"
-            name="email"
-            onChange={handleFieldChange}
-            placeholder="Email address!"
-            required
-          />
-        </div>
-        <div>
-          <button type="submit">Add User</button>
-        </div>
-      </form>
-    </div>
+      <div className="formContainer">
+        <h2>Please fill out the details of the user you would like to add!</h2>
+        <form className="form" onSubmit={handleAddUser}>
+          <div>
+            <input
+              type="text"
+              className="firstname"
+              name="firstname"
+              onChange={handleFieldChange}
+              placeholder="First name!"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              className="lastname"
+              name="lastname"
+              onChange={handleFieldChange}
+              placeholder="Last name!"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              className="job"
+              name="job"
+              onChange={handleFieldChange}
+              placeholder="Job title!"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              className="email"
+              name="email"
+              onChange={handleFieldChange}
+              placeholder="Email address!"
+              required
+            />
+          </div>
+          <div>
+            <button type="submit">Add User</button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
