@@ -10,6 +10,7 @@
   margin-top: 30px;
   padding: 5px 20px 5px 20px;
   border-radius: 30px;
+  text-align: center;
 }
 
 .alert-error {
@@ -19,4 +20,5 @@
   margin-top: 30px;
   padding: 5px 20px 5px 20px;
   border-radius: 30px;
+  text-align: center;
 }

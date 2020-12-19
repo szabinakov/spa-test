@@ -93,11 +93,11 @@ h2 {
 
 @media only screen and (min-width: 470px) {
   .formContainer {
-    height: 600px;
+    height: 500px;
     justify-content: space-evenly;
   }
   .form {
-    min-width: 400px;
+    min-width: 380px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -107,11 +107,9 @@ h2 {
 
 @media only screen and (min-width: 768px) {
   .formContainer {
-    height: 600px;
     margin-top: 50px;
   }
   .form {
     min-width: 380px;
-    height: 450px;
   }
 }
