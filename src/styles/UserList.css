@@ -26,18 +26,18 @@
 }
 
 .userCardContainer {
-  background-color: rgba(247, 140, 107);
+  background-color: var(--orange);
   border-radius: 30px;
   margin-bottom: 50px;
   padding: 10px;
-  box-shadow: 10px 10px 0 3px rgb(4, 57, 75);
+  box-shadow: 10px 10px 0 3px var(--darkblue);
 }
 
+/*****************Delete Button*****************/
+
 .userCardContainer > button {
-  /* position: relative;
-  display: inline-block; */
   align-self: center;
-  background-color: rgba(247, 140, 107);
+  background-color: var(--orange);
   border: none;
 }
 .userCardContainer > button > span {
@@ -58,4 +58,60 @@
 
 .userCardContainer > button:hover .tooltiptext {
   visibility: visible;
+}
+
+/*****************Social Container*****************/
+
+.socialDiv {
+  display: flex;
+  justify-content: center;
+}
+.socialIcons {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.socialIcons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+}
+
+.socialIcons .iconContainer {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  transition: all 265ms ease-out;
+}
+
+.socialIcons a {
+  display: inline-block;
+  color: white;
+}
+
+.socialIcons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: block;
+  background: var(--darkblue);
+  transition: all 700ms ease-in-out;
+}
+
+.socialIcons a:hover:before {
+  transform: scale(0);
+  transition: all 400ms ease-in;
+}
+
+.socialIcons a:hover .iconContainer {
+  transform: scale(2);
+  -ms-transform: scale(2);
+  -webkit-transform: scale(2);
+  color: var(--darkblue);
+  transition: all 400ms ease-in;
 }
