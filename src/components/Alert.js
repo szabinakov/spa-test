@@ -6,7 +6,12 @@ export default function Alert({ message, success }) {
   if (!message) return null;
   return (
     <div className="alertContainer">
-      <div className={`alert-${success ? "success" : "error"}`}>{message}</div>
+      <div
+        data-testid={`alert-${success ? "success" : "error"}`}
+        className={`alert-${success ? "success" : "error"}`}
+      >
+        {message}
+      </div>
     </div>
   );
 }
