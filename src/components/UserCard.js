@@ -25,22 +25,34 @@ export default function UserCard({ id, name, email, avatar, deleteUser }) {
       <div className="socialDiv">
         <ul className="socialIcons">
           <li>
-            <a href="https://www.instagram.com/">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon className="iconContainer" icon={faInstagram} />
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/?lang=en-gb">
+            <a
+              href="https://twitter.com/?lang=en-gb"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon className="iconContainer" icon={faTwitter} />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/feed/">
+            <a
+              href="https://www.linkedin.com/feed/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon className="iconContainer" icon={faLinkedin} />
             </a>
           </li>
           <li>
-            <a href="https://codepen.io/">
+            <a href="https://codepen.io/" target="_blank" rel="noreferrer">
               <FontAwesomeIcon className="iconContainer" icon={faCodepen} />
             </a>
           </li>
@@ -53,7 +65,7 @@ export default function UserCard({ id, name, email, avatar, deleteUser }) {
 UserCard.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  emai: PropTypes.string,
+  email: PropTypes.string,
   avatar: PropTypes.string,
   deleteUser: PropTypes.func,
 };
