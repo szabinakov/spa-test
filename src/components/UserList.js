@@ -49,17 +49,19 @@ export default function UserList() {
       });
   };
   return (
-    <div className="userListContainer">
+    <>
       <Alert message={alert.message} success={alert.isSuccess} />
-      {usersForActionList.map((user) => (
-        <UserCard
-          key={user.id}
-          name={`${user.first_name} ${user.last_name}`}
-          email={user.email}
-          avatar={user.avatar}
-          deleteUser={deleteUser}
-        />
-      ))}
-    </div>
+      <div className="userListContainer">
+        {usersForActionList.map((user) => (
+          <UserCard
+            key={user.id}
+            name={`${user.first_name} ${user.last_name}`}
+            email={user.email}
+            avatar={user.avatar}
+            deleteUser={deleteUser}
+          />
+        ))}
+      </div>
+    </>
   );
 }

@@ -45,42 +45,44 @@ export default function Login({ userState, setUserState }) {
   };
 
   return (
-    <div className="formContainer">
+    <>
       <Alert message={alert.message} success={alert.isSuccess} />
-      <h1>Welcome to the App, Please login!</h1>
-      <form className="form" onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="text"
-            id="email"
-            className="email"
-            name="email"
-            placeholder="Enter email!"
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="password"
-            id="password"
-            className="password"
-            name="password"
-            placeholder="Enter password!"
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <button type="submit">Login</button>
-        </div>
-        <div>
-          <Link to="/register">
-            <p>Not a member? Register here!</p>
-          </Link>
-        </div>
-      </form>
-    </div>
+      <div className="formContainer">
+        <h1>Welcome to the App, Please login!</h1>
+        <form className="form" onSubmit={handleSubmit}>
+          <div>
+            <input
+              type="text"
+              id="email"
+              className="email"
+              name="email"
+              placeholder="Enter email!"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              className="password"
+              name="password"
+              placeholder="Enter password!"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <button type="submit">Login</button>
+          </div>
+          <div>
+            <Link to="/register">
+              <p>Not a member? Register here!</p>
+            </Link>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
 

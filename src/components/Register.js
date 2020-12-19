@@ -48,53 +48,55 @@ export default function Register({ userState, setUserState }) {
     }
   };
   return (
-    <div className="formContainer">
+    <>
       <Alert message={alert.message} success={alert.isSuccess} />
-      <h1>Please fill out the details below!</h1>
-      <form className="form" onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="text"
-            id="email"
-            className="email"
-            name="email"
-            placeholder="Enter your email address!"
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="password"
-            id="password"
-            className="password"
-            name="password"
-            placeholder="Enter your chosen password!"
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="password"
-            id="confirmPassword"
-            className="confirmPassword"
-            name="confirmPassword"
-            placeholder="Confirm your password!"
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <button type="submit">Register</button>
-        </div>
-        <div>
-          <Link to="/">
-            <p>Already member? Login here!</p>
-          </Link>
-        </div>
-      </form>
-    </div>
+      <div className="formContainer">
+        <h1>Please fill out the details below!</h1>
+        <form className="form" onSubmit={handleSubmit}>
+          <div>
+            <input
+              type="text"
+              id="email"
+              className="email"
+              name="email"
+              placeholder="Enter your email address!"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              className="password"
+              name="password"
+              placeholder="Enter your chosen password!"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="confirmPassword"
+              className="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm your password!"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <button type="submit">Register</button>
+          </div>
+          <div>
+            <Link to="/">
+              <p>Already member? Login here!</p>
+            </Link>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
 
