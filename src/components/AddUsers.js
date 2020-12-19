@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Alert from "./Alert.js";
+import "../styles/Form.css";
 
 export default function AddUsers() {
   const initialState = {
@@ -40,41 +41,52 @@ export default function AddUsers() {
       });
   };
   return (
-    <div>
+    <div className="formContainer">
       <Alert message={alert.message} success={alert.isSuccess} />
-      <form onSubmit={handleAddUser}>
-        <label htmlFor="firstname">First Name</label>
-        <input
-          type="text"
-          className="firstname"
-          name="firstname"
-          onChange={handleFieldChange}
-          required
-        />
-        <label htmlFor="lastname">Last Name</label>
-        <input
-          type="text"
-          className="lastname"
-          name="lastname"
-          onChange={handleFieldChange}
-          required
-        />
-        <label htmlFor="job">Job</label>
-        <input
-          type="text"
-          className="job"
-          name="job"
-          onChange={handleFieldChange}
-        />
-        <label htmlFor="email">Email Address</label>
-        <input
-          type="text"
-          className="email"
-          name="email"
-          onChange={handleFieldChange}
-          required
-        />
-        <button type="submit">Add User</button>
+      <h2>Please fill out the details of the user you would like to add!</h2>
+      <form className="form" onSubmit={handleAddUser}>
+        <div>
+          <input
+            type="text"
+            className="firstname"
+            name="firstname"
+            onChange={handleFieldChange}
+            placeholder="First name!"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            className="lastname"
+            name="lastname"
+            onChange={handleFieldChange}
+            placeholder="Last name!"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            className="job"
+            name="job"
+            onChange={handleFieldChange}
+            placeholder="Job title!"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            className="email"
+            name="email"
+            onChange={handleFieldChange}
+            placeholder="Email address!"
+            required
+          />
+        </div>
+        <div>
+          <button type="submit">Add User</button>
+        </div>
       </form>
     </div>
   );
