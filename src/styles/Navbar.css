@@ -1,0 +1,23 @@
+.navContainer > ul {
+  display: flex;
+  width: 200px;
+  margin-top: 0px;
+  padding-left: 5px;
+  justify-content: space-evenly;
+}
+
+.navContainer > ul > li:hover {
+  border-bottom: 2px solid var(--orange);
+}
+
+.navContainer > ul > li {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 70px;
+}
+.navContainer > ul > li > a {
+  text-decoration: none;
+  color: var(--darkblue);
+  font-size: 30px;
+}
