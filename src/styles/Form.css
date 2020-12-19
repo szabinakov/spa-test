@@ -9,12 +9,13 @@
 h2 {
   text-align: center;
   font-weight: lighter;
+  color: var(--darkblue);
 }
 
 .form {
   background-color: var(--darkpink);
   border-radius: 20px;
-  box-shadow: 10px 10px 20px;
+  box-shadow: 10px 10px 20px var(--darkblue);
   padding: 10px;
   min-width: 260px;
 }

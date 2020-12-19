@@ -8,8 +8,17 @@
 .userCardContainer {
   width: 200px;
   margin: 20px;
+  background-color: var(--orange);
+  border-radius: 30px;
+  margin-bottom: 50px;
+  padding: 10px;
+  box-shadow: 8px 8px 1px 2px var(--darkblue);
+  border: 1px solid var(--darkblue);
 }
-
+.userCardContainer:hover {
+  box-shadow: 0px 0px 0px;
+  transform: translate(10px, 10px);
+}
 .userCardContainer > .imgContainer {
   text-align: center;
 }
@@ -23,14 +32,6 @@
   text-align: center;
   font-size: 20px;
   font-weight: bolder;
-}
-
-.userCardContainer {
-  background-color: var(--orange);
-  border-radius: 30px;
-  margin-bottom: 50px;
-  padding: 10px;
-  box-shadow: 10px 10px 0 3px var(--darkblue);
 }
 
 /*****************Delete Button*****************/
