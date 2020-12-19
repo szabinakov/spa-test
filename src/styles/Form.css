@@ -5,13 +5,14 @@
   align-items: center;
   height: 350px;
 }
-.formContainer > h1 {
+.formContainer > h1,
+h2 {
   text-align: center;
   font-weight: lighter;
 }
 
 .form {
-  background-color: rgba(239, 71, 110);
+  background-color: var(--darkpink);
   border-radius: 20px;
   box-shadow: 10px 10px 20px;
   padding: 10px;
@@ -33,7 +34,7 @@
   width: 80%;
   align-self: center;
   border: none;
-  background-color: rgba(239, 71, 110);
+  background-color: var(--darkpink);
   border-bottom: 1px solid black;
 }
 
@@ -62,12 +63,12 @@
 
 /** Login Form Button Styling **/
 .form > div > button {
-  width: 60px;
+  width: 81px;
   height: 25px;
   align-self: center;
   border: none;
   text-transform: uppercase;
-  background-color: rgba(239, 71, 110);
+  background-color: var(--darkpink);
 }
 
 .form > div > button:hover {
