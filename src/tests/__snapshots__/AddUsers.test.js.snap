@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddUsers renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="formContainer"
+  >
+    <h2>
+      Please fill out the details of the user you would like to add!
+    </h2>
+    <form
+      class="form"
+      data-testid="form"
+    >
+      <div>
+        <input
+          class="firstname"
+          data-testid="firstname"
+          name="firstname"
+          placeholder="First name!"
+          required=""
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          class="lastname"
+          data-testid="lastname"
+          name="lastname"
+          placeholder="Last name!"
+          required=""
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          class="job"
+          data-testid="job"
+          name="job"
+          placeholder="Job title!"
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          class="email"
+          data-testid="email"
+          name="email"
+          placeholder="Email address!"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="buttonDiv"
+        data-testid="buttonDiv"
+      >
+        <button
+          type="submit"
+        >
+          Add User
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;

@@ -45,11 +45,12 @@ export default function AddUsers() {
       <Alert message={alert.message} success={alert.isSuccess} />
       <div className="formContainer">
         <h2>Please fill out the details of the user you would like to add!</h2>
-        <form className="form" onSubmit={handleAddUser}>
+        <form className="form" data-testid="form" onSubmit={handleAddUser}>
           <div>
             <input
               type="text"
               className="firstname"
+              data-testid="firstname"
               name="firstname"
               onChange={handleFieldChange}
               placeholder="First name!"
@@ -60,6 +61,7 @@ export default function AddUsers() {
             <input
               type="text"
               className="lastname"
+              data-testid="lastname"
               name="lastname"
               onChange={handleFieldChange}
               placeholder="Last name!"
@@ -70,6 +72,7 @@ export default function AddUsers() {
             <input
               type="text"
               className="job"
+              data-testid="job"
               name="job"
               onChange={handleFieldChange}
               placeholder="Job title!"
@@ -79,13 +82,14 @@ export default function AddUsers() {
             <input
               type="text"
               className="email"
+              data-testid="email"
               name="email"
               onChange={handleFieldChange}
               placeholder="Email address!"
               required
             />
           </div>
-          <div>
+          <div data-testid="buttonDiv" className="buttonDiv">
             <button type="submit">Add User</button>
           </div>
         </form>
