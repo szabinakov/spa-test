@@ -12,18 +12,28 @@ import {
 
 export default function UserCard({ id, name, email, avatar, deleteUser }) {
   return (
-    <div className="userCardContainer">
+    <div data-testid="userCardContainer" className="userCardContainer">
       <button onClick={() => deleteUser(id)}>
-        <span class="tooltiptext">Delete User</span>
-        <FontAwesomeIcon className="iconContainer" icon={faTrash} />
+        <span data-testid="tooltiptext" className="tooltiptext">
+          Delete User
+        </span>
+        <FontAwesomeIcon
+          data-testid="iconContainer"
+          className="iconContainer"
+          icon={faTrash}
+        />
       </button>
-      <div className="imgContainer">
+      <div data-testid="imgContainer" className="imgContainer">
         <img src={avatar} alt="face of people" />
       </div>
-      <p className="nameContainer">{name}</p>
-      <p className="emailContainer">{email}</p>
-      <div className="socialDiv">
-        <ul className="socialIcons">
+      <p data-testid="nameContainer" className="nameContainer">
+        {name}
+      </p>
+      <p data-testid="emailContainer" className="emailContainer">
+        {email}
+      </p>
+      <div data-testid="socialDiv" className="socialDiv">
+        <ul data-testid="socialIcons" className="socialIcons">
           <li>
             <a
               href="https://www.instagram.com/"
