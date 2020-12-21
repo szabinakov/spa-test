@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Matches the snapshot when user is not logged in 1`] = `
+<DocumentFragment>
+  <div
+    class="formContainer"
+  >
+    <h1>
+      Welcome to the App, Please login!
+    </h1>
+    <form
+      class="form"
+      data-testid="form"
+    >
+      <div>
+        <input
+          class="email"
+          data-testid="email"
+          id="email"
+          name="email"
+          placeholder="Enter email!"
+          required=""
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          class="password"
+          data-testid="password"
+          id="password"
+          name="password"
+          placeholder="Enter password!"
+          required=""
+          type="password"
+        />
+      </div>
+      <div
+        class="buttonDiv"
+        data-testid="buttonDiv"
+      >
+        <button
+          type="submit"
+        >
+          Login
+        </button>
+      </div>
+      <div
+        class="link"
+        data-testid="link"
+      >
+        <a
+          href="/register"
+        >
+          <p>
+            Not a member? Register here!
+          </p>
+        </a>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Home Matches the snapshot when user logged in 1`] = `
+<DocumentFragment>
+  <div
+    class="userListContainer"
+    data-testid="userListContainer"
+  />
+</DocumentFragment>
+`;

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="formContainer"
+  >
+    <h1>
+      Please fill out the details below!
+    </h1>
+    <form
+      class="form"
+      data-testid="form"
+    >
+      <div>
+        <input
+          class="email"
+          data-testid="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address!"
+          required=""
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          class="password"
+          data-testid="password"
+          id="password"
+          name="password"
+          placeholder="Enter your chosen password!"
+          required=""
+          type="password"
+        />
+      </div>
+      <div>
+        <input
+          class="confirmPassword"
+          data-testid="confirmPassword"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="Confirm your password!"
+          required=""
+          type="password"
+        />
+      </div>
+      <div
+        class="buttonDiv"
+        data-testid="buttonDiv"
+      >
+        <button
+          type="submit"
+        >
+          Register
+        </button>
+      </div>
+      <div
+        class="link"
+        data-testid="link"
+      >
+        <a
+          href="/"
+        >
+          <p>
+            Already member? Login here!
+          </p>
+        </a>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
