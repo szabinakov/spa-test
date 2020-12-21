@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import "../styles/Form.css";
 import Alert from "./Alert.js";
 
-export default function Register({ userState, setUserState }) {
+export default function Register({ setUserState }) {
   const initialState = {
     alert: {
       message: "",
@@ -101,6 +101,5 @@ export default function Register({ userState, setUserState }) {
 }
 
 Register.propTypes = {
-  userState: PropTypes.object,
   setUserState: PropTypes.func,
 };

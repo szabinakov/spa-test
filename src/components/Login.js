@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import "../styles/Form.css";
 import Alert from "./Alert.js";
 
-export default function Login({ userState, setUserState }) {
+export default function Login({ setUserState }) {
   const initialState = {
     alert: {
       message: "",
@@ -87,6 +87,5 @@ export default function Login({ userState, setUserState }) {
 }
 
 Login.propTypes = {
-  userState: PropTypes.object,
   setUserState: PropTypes.func,
 };
