@@ -51,7 +51,7 @@ export default function UserList() {
   return (
     <>
       <Alert message={alert.message} success={alert.isSuccess} />
-      <div className="userListContainer">
+      <div data-testid="userListContainer" className="userListContainer">
         {usersForActionList.map((user) => (
           <UserCard
             key={user.id}
