@@ -1,8 +1,14 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import App from "../components/App";
+import { BrowserRouter as Router } from "react-router-dom";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App", () => {
+  it("Matches the snapshot", () => {
+    const { asFragment } = render(
+      <Router>
+        <App />
+      </Router>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

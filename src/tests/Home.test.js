@@ -13,7 +13,9 @@ describe("Home", () => {
 
   it("Matches the snapshot when user logged in", () => {
     const { asFragment } = render(
-      <Home setUserState={mocksetUserStateFunc} userState={mockStateTrue} />
+      <Router>
+        <Home setUserState={mocksetUserStateFunc} userState={mockStateTrue} />
+      </Router>
     );
     expect(asFragment()).toMatchSnapshot();
   });
