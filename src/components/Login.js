@@ -49,12 +49,13 @@ export default function Login({ setUserState }) {
       <Alert message={alert.message} success={alert.isSuccess} />
       <div className="formContainer">
         <h1>Welcome to the App, Please login!</h1>
-        <form className="form" onSubmit={handleSubmit}>
+        <form data-testid="form" className="form" onSubmit={handleSubmit}>
           <div>
             <input
               type="text"
               id="email"
               className="email"
+              data-testid="email"
               name="email"
               placeholder="Enter email!"
               onChange={handleChange}
@@ -66,16 +67,17 @@ export default function Login({ setUserState }) {
               type="password"
               id="password"
               className="password"
+              data-testid="password"
               name="password"
               placeholder="Enter password!"
               onChange={handleChange}
               required
             />
           </div>
-          <div>
+          <div data-testid="buttonDiv" className="buttonDiv">
             <button type="submit">Login</button>
           </div>
-          <div>
+          <div data-testid="link" className="link">
             <Link to="/register">
               <p>Not a member? Register here!</p>
             </Link>

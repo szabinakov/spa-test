@@ -52,12 +52,13 @@ export default function Register({ setUserState }) {
       <Alert message={alert.message} success={alert.isSuccess} />
       <div className="formContainer">
         <h1>Please fill out the details below!</h1>
-        <form className="form" onSubmit={handleSubmit}>
+        <form data-testid="form" className="form" onSubmit={handleSubmit}>
           <div>
             <input
               type="text"
               id="email"
               className="email"
+              data-testid="email"
               name="email"
               placeholder="Enter your email address!"
               onChange={handleChange}
@@ -69,6 +70,7 @@ export default function Register({ setUserState }) {
               type="password"
               id="password"
               className="password"
+              data-testid="password"
               name="password"
               placeholder="Enter your chosen password!"
               onChange={handleChange}
@@ -80,16 +82,17 @@ export default function Register({ setUserState }) {
               type="password"
               id="confirmPassword"
               className="confirmPassword"
+              data-testid="confirmPassword"
               name="confirmPassword"
               placeholder="Confirm your password!"
               onChange={handleChange}
               required
             />
           </div>
-          <div>
+          <div data-testid="buttonDiv" className="buttonDiv">
             <button type="submit">Register</button>
           </div>
-          <div>
+          <div data-testid="link" className="link">
             <Link to="/">
               <p>Already member? Login here!</p>
             </Link>
