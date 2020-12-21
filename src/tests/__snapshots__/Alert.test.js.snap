@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddUsers renders error message 1`] = `
+<DocumentFragment>
+  <div
+    class="alertContainer"
+  >
+    <div
+      class="alert-error"
+      data-testid="alert-error"
+    >
+      Mocked Error Message
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AddUsers renders success message 1`] = `
+<DocumentFragment>
+  <div
+    class="alertContainer"
+  >
+    <div
+      class="alert-success"
+      data-testid="alert-success"
+    >
+      Mocked Success Message
+    </div>
+  </div>
+</DocumentFragment>
+`;

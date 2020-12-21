@@ -9,15 +9,15 @@ export default function Navbar({ userState }) {
   const isUserLoggedIn = userState.isUserLoggedIn;
 
   return (
-    <div className="navContainer">
+    <div data-testid="navContainer" className="navContainer">
       {isUserLoggedIn && (
         <ul>
-          <li className="homeLink">
+          <li data-testid="homeLink" className="homeLink">
             <Link to="/">
               <FontAwesomeIcon className="iconContainer" icon={faHome} />
             </Link>
           </li>
-          <li className="addUserLink">
+          <li data-testid="addUserLink" className="addUserLink">
             <Link to="/add-users">
               <FontAwesomeIcon className="iconContainer" icon={faUserPlus} />
             </Link>
