@@ -21,7 +21,9 @@ function App() {
         <Route
           exact
           path="/"
-          render={(props) => <Home {...props} setUserState={setUser} />}
+          render={(props) => (
+            <Home {...props} userState={user} setUserState={setUser} />
+          )}
         />
         <Route
           exact
