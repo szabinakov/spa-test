@@ -75,7 +75,7 @@ export default function Login({ setUserState }) {
             />
           </div>
           <div data-testid="buttonDiv" className="buttonDiv">
-            <button type="submit">Login</button>
+            <button type="submit">Login!</button>
           </div>
           <div data-testid="link" className="link">
             <Link to="/register">

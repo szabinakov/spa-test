@@ -28,7 +28,7 @@ export default function AddUsers() {
       .post("https://reqres.in/api/users", fields)
       .then(() => {
         setAlert({
-          message: "User has been added successfully",
+          message: "User has been added successfully!",
           isSuccess: true,
         });
       })
@@ -90,7 +90,7 @@ export default function AddUsers() {
             />
           </div>
           <div data-testid="buttonDiv" className="buttonDiv">
-            <button type="submit">Add User</button>
+            <button type="submit">Add User!</button>
           </div>
         </form>
       </div>

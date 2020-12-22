@@ -27,7 +27,6 @@ export default function Register({ setUserState }) {
     event.preventDefault();
 
     if (value.password === value.confirmPassword) {
-      console.log("Password Matches");
       axios
         .post("https://reqres.in/api/register", {
           email: value.email,
@@ -90,7 +89,7 @@ export default function Register({ setUserState }) {
             />
           </div>
           <div data-testid="buttonDiv" className="buttonDiv">
-            <button type="submit">Register</button>
+            <button type="submit">Register!</button>
           </div>
           <div data-testid="link" className="link">
             <Link to="/">

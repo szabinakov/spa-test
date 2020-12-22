@@ -15,7 +15,7 @@ export default function UserCard({ id, name, email, avatar, deleteUser }) {
     <div data-testid="userCardContainer" className="userCardContainer">
       <button onClick={() => deleteUser(id)}>
         <span data-testid="tooltiptext" className="tooltiptext">
-          Delete User
+          Delete User!
         </span>
         <FontAwesomeIcon
           data-testid="iconContainer"
