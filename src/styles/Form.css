@@ -10,7 +10,9 @@
 h2 {
   text-align: center;
   font-weight: lighter;
-  color: var(--darkblue);
+  color: var(--orange);
+  background-color: var(--darkblue);
+  width: 100vw;
 }
 
 .form {
